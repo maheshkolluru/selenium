@@ -1,0 +1,68 @@
+Mouse Handlings:
+handling the scenerios of the mouse by using script.
+there are multiple Scenerios like movetoelement,rightclick,draganddrop,clicknhold,doubleclick.
+
+Scenerio1:(move to cursor)
+To move the cursor we need to craete the Object of Actions class and we need to pass webdriver referenece variable
+By using Actions class ref.variable we need to call non static method call movetoelement.
+in these method we need to pass address of the element where we want to perform operation by using webelement  ref varia
+and we also use mandatory method called perform().
+
+Actions act = new Actions( WebDriver driver);
+act.movetoelement(webelement refvariable).perform();
+
+Scenerio2:(right click)
+we need to craete the Object of Actions class and we need to pass webdriver referenece variable
+By using Actions class ref.variable we need to call non static method call ContextClick().
+in these method we need to pass address of the element where we want to perform operation by using webelement  ref varia
+and we also use mandatory method called perform().
+
+Actions act = new Actions( WebDriver driver);
+act.ContextClick(webelement refvariable).perform();
+
+Scenerio3:(click and hold)
+we need to craete the Object of Actions class and we need to pass webdriver referenece variable
+By using Actions class ref.variable we need to call non static method call Clickandhold().
+in these method we need to pass address of the element where we want to perform operation by using webelement  ref varia
+and we also use mandatory method called perform().
+
+Actions act = new Actions( WebDriver driver);
+act.Clickandhold(webelement refvariable).perform();
+
+
+Scenerio4:(Doubleclick)
+we need to craete the Object of Actions class and we need to pass webdriver referenece variable
+By using Actions class ref.variable we need to call non static method call DoubleClick().
+in these method we need to pass address of the element where we want to perform operation by using webelement  ref varia
+and we also use mandatory method called perform().
+
+Actions act = new Actions( WebDriver driver);
+act.DoubleClick(webelement refvariable).perform();
+
+
+Scenerio5:(Draganddrop)
+draganddrop we can perfom operation in  two ways
+1.when we have source and destination
+we need to craete the Object of Actions class and we need to pass webdriver referenece variable
+By using Actions class ref.variable we need to call non static method call Draganddrop().
+in these we need to pass the adresses of the source element and destination element by using web element ref varibales
+and we also use mandatory method called perform().
+
+Actions act = new Actions( WebDriver driver);
+act.draganddrop(webelement sourcevariable1,webelement destivariable1).perform();
+
+2.when we have source but no destination
+we need to craete the Object of Actions class and we need to pass webdriver referenece variable
+By using Actions class ref.variable we need to call non static method call Draganddrop().
+in these we need to pass the adress of the source element by using ref varible  and int x ,int y
+and we also use mandatory method called perform().
+
+Actions act = new Actions( WebDriver driver);
+act.draganddrop(webelement sourcevariable1,int x,int y).perform();
+
+
+
+
+
+
+

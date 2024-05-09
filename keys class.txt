@@ -1,0 +1,23 @@
+Keys handling
+Handling the keys of the keyboard by using script  is known as key boardhandling
+
+we can handle by using two classes
+keys class
+robot class
+
+keys class:
+by using keys class we can handle the all keys of keyboard except numbers and alphabets 
+we cannot use keys class ouside the sendkeys()
+
+Robot class
+using robot class we can handle all the keys of our keyboard
+we can overcome all the drawbacks of keys class
+robot class coming from java.awt.package
+we need to create object of robot class
+Robot r = new Robot();
+by using reference variable of robot class we need to call two non static methods
+KeyPress()
+KeyRelease()
+
+r.KeyPress(KeyEvent.vk_stroke);
+r.KeyRelease(KeyEvent.vk_stroke);
