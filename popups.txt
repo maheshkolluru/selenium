@@ -1,0 +1,104 @@
+Alert popup:
+
+alert popup are called as javascript popup
+these popups are uninspectable,undragable,uncolourful,main page will disable when ever these popups arise.
+since we need to switch our driver from main page to alert popup.
+
+Alert alt = driver.switchto().alert();
+
+alt.accept()=ok
+alt.dismiss()=cancel
+alt.gettext()=get the text present in alertpopup
+alt.sendkeys()=which is used to enter value in the field
+
+frame or frame popup:
+whenever our webpage is divided into multiple sections
+then we go for frame handling
+to identify the frame is present in webpage or not we need to go to devtool and in inspect section we should type //iframeor
+//frame
+ if our driver is present in main page we need to switch to frame  than there are three ways
+driver.switchto().frame(int i);
+driver.switchto().frame( webelement ele);
+driver.switchto().frame(String str);
+
+
+if we want to switch from child frame to parent frame
+driver.switchto().parentframe();
+
+if we want to switch to frame to main page
+driver.switchto().defaultcontent();
+
+nested frame
+when there are multiple frames presnet in a relation of parent child.then we call it as nested frame
+driver.switchto().frame(int index).switchto().frame(int index)
+
+after going to first child frame,if we want to go second child we need to go back to parent frame and then second child
+
+
+Hidden division popup();
+hidden division popup are inspectable,colurful,undragable,main page is kept  enabled when these popup arise.
+
+
+
+authentication popup:
+this popup is uninspectable this popup is generally used in banking sector,beacuse of its security
+these popup requires username and password to get inside the web application
+username and password can be provided with url with @symbol
+
+
+driver.get("https://"+un+":"+password"@"+"url");
+
+Notification popup:
+these popup arise without any action by web or user.it is rised by itself
+these popup are uninspectble
+To handle this popup we need to block at the lauching the browser
+here we use chromeoptions class and craete the object of class
+we call the addaruments() in which we pass "--disable-notifications" 
+and we pass chromeoption ref variable in chromedriver();
+
+chromeoptions opt= new chromeoptions()
+opt.addarguments("--disable-notifications")
+webdriver driver = new chromeDriver(opt)
+
+file upload:
+we can handle by using 
+sendkeys();
+toolkit with robotclass
+
+in sendkeys we directly pass the path of the file
+sendkeys only work if we are having attribute type='file'
+
+Tookit with robot class
+
+Stringselection class object should be created in which we pass path of the file
+Stringselection s= new Stringselection("path")
+now we will configure the toolkit
+Toolkit().getdefaulttoolkit().getsystemclipboard().setcontents(s,null);
+
+then by using robot class we will paste the path of file and press enter 
+
+
+Scrolling:
+scrolling can be handle by two ways 
+By java
+By javascriptexecutor
+
+By java:
+by using the robot class
+drawback is we need to press keys multiple times
+
+By javascriptexecutor
+since it is interface we do type casting
+javascriptexecutor jse =(javascriptexecutor)driver
+then we call method call executescript in which we pass address of elemnet till where we want to scroll by using webelement
+ref varibale
+jse.executescript("arguments[0].ScrollIntoView(true);",webelement ref varibale);
+ or
+jse.executescript("window.scrollBy(int x-axis,int y-axis);");
+
+
+ 
+
+
+
+
