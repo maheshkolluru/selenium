@@ -1,0 +1,21 @@
+we go for screenshot in automation when ever we run our multiple scripts simultaneously
+there is chance of fail of scripts
+
+so wherever our script is failed it must take screenshot
+here we use Takescreenshot interface and we go for type casting
+
+Takescreenshot sh=(Takescreenshot)driver;
+
+then we call non static method getscreenshot() in which we pass outputtype.file 
+
+File src = sh.getscreenshot(outputtype.File);
+and we need to create object of File class in which we pass path where we want store screenshot in .png format
+File dist= new File("path.png");
+
+now we use Files.copy() to transfer screenshot from idetool to systempath
+Files.copy(src,dist)
+
+dist.getabsolutepath( )
+will return the adress where screenshot is present.
+
+
