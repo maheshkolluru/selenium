@@ -1,0 +1,29 @@
+navigational methods are refresh(),back().forward()
+
+
+Here we will use navigate() which is coming from remote webdriver
+Return type of navigate() is navigation interface
+in navigation interface we have three non-static methods  are refresh(),back().forward()
+
+
+driver.navigate().refresh(); to refresh the page
+driver.navigate().back();to go to back page
+driver.navigate().forward(); to go to forward page
+driver.navigate().to(string url) which is used to launch web application but it is not recommended
+because it will  not wait  till the whole web page  loaded its try to perform next operation
+
+browser control methods
+maximize browser
+driver.manage().window().maximize();
+minimizebrowser
+driver.manage().window().minimize();
+resize browser
+dimension d = new dimension(int w ,int h);
+driver.manage().window().setsize(d);
+
+setposition
+point p = new point(int x ,int y);
+driver.manage().window().setposition(p);
+
+
+

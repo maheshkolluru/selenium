@@ -1,0 +1,22 @@
+validation methods 
+is selected()
+is displayed()
+is enabled()
+the return type of validation methods is boolean it is coming from web element interface
+
+is selected():
+which is used to validate the radio buttons and check box
+is displayed():
+which is used to validated the message is displayed or not
+is enabled()
+which is used to validate the whether html attribute is enabled or disabled by html developers
+
+
+submit()
+this method will work with submit type of scenerios
+to go with this methods we need to have one attribute type='submit' in html
+usually submit()  will never for login scenerios
+
+clear() which is used to clear the data present in the text box
+
+click() perform mouse click action for any intearctive UIelements(like radiobuttons,links,buttons,checkboxes)
