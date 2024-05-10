@@ -1,0 +1,21 @@
+dropdrown:
+there are multiple approaches to handle the dropdown
+Keyboard handling
+findelements
+selectclass
+
+By using keyboard handling it takes lot of time and we need to press keys multiple times,so generally we dont prefer
+By using findelement approach we can handle when we dont have select html tag
+select class is best appraoch to handle dropdown
+in select class approach we must conform one thing is the dropdown is with select html tag
+we need to create the select class object and in which we pass address of dropdown by using webelemet ref variable
+select s = new select(webelement refvaribale);
+in select class we have multiple non static methods
+s.selectbyindex(int index);
+s.selectbyvalue(String value);
+s.selectbyvisibletext(String);
+
+s.deselectbyindex(int index);
+s.deselectbyvalue(String value);
+s.deselectbyvisibletext(String);
+s.deselectall();

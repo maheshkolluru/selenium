@@ -1,0 +1,57 @@
+synchronisation:
+whenever our tool runs faster than the loading  web appilcation we get synchronisation issue
+whenever we will get issue we will get nosuchelement exception.To overcome this issue we will use waits
+
+Static wait 
+it will wait for a particular interval of time whether our element is loaded or not
+Thread.sleep(milliseconds);
+
+Dynamic wait
+if we provide some interval of time if our element is loaded  before time it will goes to next operation immidiately in our script
+multiple types
+
+1.implicitwait
+2.fluentwait
+3.explicitwait
+
+implicitwait:
+it is called as dynamic wait or global wait
+if we write once it will effect throughtout the program
+implicit wait works with every findelements() and findelement() 
+if element is found it will return the address otherwsie it will check for implicit wait if it is there than go to findelements() and findelement()
+with every 0.5sec(polling time is defult time)
+if implicit time is over element not found it will give nosuchelementexception
+syntax:
+implicitwait driver.manage().timeouts().implicitywait(duration.ofseconds(time))
+
+fluentwait :
+it is similar to explicit wait
+it is also called as user defined wait 
+in these we can customise polling time ,exception
+calling fluentwait
+fluentwait wait = new fluentwait(web ref);
+
+providing how much time it is used to wait
+wait.withtimout(duration.ofseconds(time));
+
+userdefined polling time
+wait.pollingevery(duration.ofseconds(time));
+
+userdefined exception
+wait.ignoring(timeoutexception.class);
+
+method to satisfy
+wait.until(expcond.expecmeth);
+
+explicit wait:
+it is also called as dynamic wait and conditional wait
+here we  need to satisfy the multiple  conditional methods to satisfy
+if condition is satisfied it will return address other wise it will check the wait ,if wait is there ,than again return
+back to conditional method repeat the process,till condition satisfy or time getsover
+if explicit time is over it will give TimeoutException
+syntax:
+explicit wait  webdriverwait wait = new webdriverwait(webdriver ref,duration.ofseconds(time));
+ wait.until(expectedcondition.expectedmethod)
+
+
+
